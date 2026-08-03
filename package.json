@@ -1,0 +1,21 @@
+{
+  "name": "aurelia-residences",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "AURELIA — Residences at Worli Sea Face. An award-calibre luxury web experience. React 18 · Vite · Lenis · Custom hooks.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lenis": "^1.1.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}

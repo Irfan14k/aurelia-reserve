@@ -1,0 +1,12 @@
+{
+  "name": "AURELIA Residences — Worli Sea Face",
+  "short_name": "AURELIA",
+  "description": "Where the sea keeps time. Luxury sky residences at Worli Sea Face, Mumbai.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0B0D",
+  "theme_color": "#0B0B0D",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

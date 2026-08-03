@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+dist-ssr/
+.ssr-test/
+
+# logs & environment
+*.log
+.env
+.env.*
+
+# editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.local

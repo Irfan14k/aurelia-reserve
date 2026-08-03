@@ -1,0 +1,110 @@
+/* ============================================================
+   AURELIA — DESIGN TOKENS
+   A single source of truth. Every component consumes these.
+   ============================================================ */
+
+:root {
+  /* ——— Palette ——— */
+  --ink-0: #0b0b0d;          /* page ground */
+  --ink-1: #101013;          /* raised surface */
+  --ink-2: #16161a;          /* card surface */
+  --ink-3: #1e1e24;          /* hairline-on */
+  --line: rgba(244, 241, 234, 0.08);   /* hairline */
+  --line-strong: rgba(244, 241, 234, 0.16);
+  --ivory: #f4f1ea;          /* primary text */
+  --ivory-dim: rgba(244, 241, 234, 0.62);
+  --ivory-faint: rgba(244, 241, 234, 0.38);
+  --gold: #c9a96a;           /* champagne gold */
+  --gold-bright: #e6cd94;
+  --gold-deep: #a5854c;
+  --gold-soft: rgba(201, 169, 106, 0.16);
+  --gold-line: rgba(201, 169, 106, 0.35);
+  --ember: #d98e5f;          /* rare accent — sunset light */
+
+  /* ——— Type ——— */
+  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Inter", "Helvetica Neue", system-ui, sans-serif;
+
+  /* ——— Motion ——— */
+  --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-snappy: cubic-bezier(0.66, 0, 0.34, 1);
+  --t-fast: 0.45s;
+  --t-med: 0.9s;
+  --t-slow: 1.4s;
+  --t-cine: 1.8s;
+
+  /* ——— Depth ——— */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 24px 60px -24px rgba(0, 0, 0, 0.65);
+  --shadow-3: 0 48px 120px -32px rgba(0, 0, 0, 0.8);
+  --shadow-gold: 0 24px 80px -28px rgba(201, 169, 106, 0.22);
+
+  /* ——— Glass ——— */
+  --glass-bg: rgba(20, 20, 24, 0.55);
+  --glass-bg-strong: rgba(16, 16, 19, 0.78);
+  --glass-blur: 18px;
+  --glass-border: 1px solid rgba(244, 241, 234, 0.1);
+
+  /* ——— Radii ——— */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ——— Rhythm ——— */
+  --sec-pad: clamp(6.5rem, 12vw, 11rem);
+  --wrap: min(1440px, 92vw);
+  --wrap-narrow: min(1040px, 88vw);
+
+  /* ——— Z ——— */
+  --z-bg: 0;
+  --z-content: 1;
+  --z-dust: 2;
+  --z-nav: 60;
+  --z-rail: 55;
+  --z-dock: 70;
+  --z-badges: 65;
+  --z-preloader: 100;
+  --z-modal: 90;
+  --z-cursor: 9999;
+
+  /* ——— Time-of-day tint (overridden by [data-timeofday]) ——— */
+  --tod-sky: rgba(28, 32, 52, 0.35);
+  --tod-warm: rgba(214, 150, 88, 0.1);
+  --tod-cool: rgba(60, 80, 140, 0.18);
+}
+
+/* ——— Time-of-day lighting ——— */
+[data-timeofday="dawn"] {
+  --tod-sky: rgba(70, 74, 110, 0.28);
+  --tod-warm: rgba(226, 138, 90, 0.2);
+  --tod-cool: rgba(90, 110, 170, 0.22);
+}
+[data-timeofday="day"] {
+  --tod-sky: rgba(90, 108, 148, 0.16);
+  --tod-warm: rgba(240, 214, 170, 0.08);
+  --tod-cool: rgba(120, 150, 210, 0.1);
+}
+[data-timeofday="dusk"] {
+  --tod-sky: rgba(44, 40, 66, 0.32);
+  --tod-warm: rgba(222, 130, 76, 0.22);
+  --tod-cool: rgba(70, 80, 150, 0.2);
+}
+[data-timeofday="night"] {
+  --tod-sky: rgba(12, 16, 32, 0.55);
+  --tod-warm: rgba(214, 150, 88, 0.08);
+  --tod-cool: rgba(40, 60, 130, 0.28);
+}
+
+/* ——— Reduced motion: collapse durations ——— */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ease-lux: linear;
+    --t-fast: 0.01s;
+    --t-med: 0.01s;
+    --t-slow: 0.01s;
+    --t-cine: 0.01s;
+  }
+}
