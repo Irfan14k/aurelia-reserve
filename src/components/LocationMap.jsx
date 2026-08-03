@@ -4,7 +4,7 @@ import { useCountUp } from "../hooks";
 import SectionHeading from "./SectionHeading";
 
 /**
- * Location — a stylised cinematic map of Worli's peninsula: the sea
+ * Location — a stylised cinematic map of a fictional coastline: the sea
  * drawn as gradient, routes that draw themselves, a marker that travels,
  * travel time that counts up, and hover cards over every point of interest.
  */
@@ -23,14 +23,14 @@ export default function LocationMap() {
       <div className="wrap">
         <SectionHeading
           eyebrow="06 · Location"
-          title={<>Ten minutes to <em>the rest of Mumbai</em>.</>}
-          meta="Worli Sea Face"
+          title={<>Ten minutes to <em>the rest of the city</em>.</>}
+          meta="Concept location"
         />
 
         <div className="location__grid" data-reveal="mask">
           {/* ——— The map ——— */}
           <div className="loc-map glass hairline-card" data-cursor="view" data-cursor-label="Explore">
-            <svg viewBox={MAP.viewBox} className="loc-map__svg" role="img" aria-label="Stylised map of Worli and Mumbai's coastline">
+            <svg viewBox={MAP.viewBox} className="loc-map__svg" role="img" aria-label="Stylised map of a fictional coastline with routes and points of interest">
               <defs>
                 <linearGradient id="locSea" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0%" stopColor="#1a2a4d" />
@@ -56,10 +56,10 @@ export default function LocationMap() {
               ))}
 
               {/* neighbourhood labels */}
-              <text x="470" y="330" className="loc-map__hood" textAnchor="middle">Parel</text>
-              <text x="560" y="120" className="loc-map__hood" textAnchor="middle">Bandra</text>
-              <text x="280" y="560" className="loc-map__hood" textAnchor="middle">Colaba</text>
-              <text x="520" y="560" className="loc-map__hood" textAnchor="middle">Lower Parel</text>
+              <text x="470" y="330" className="loc-map__hood" textAnchor="middle">North Quarter</text>
+              <text x="560" y="120" className="loc-map__hood" textAnchor="middle">East Quarter</text>
+              <text x="280" y="560" className="loc-map__hood" textAnchor="middle">Old Town</text>
+              <text x="520" y="560" className="loc-map__hood" textAnchor="middle">South Quarter</text>
 
               {/* active route — draws itself */}
               <path

@@ -86,7 +86,7 @@ function TiltCard({ res, index, onCompare, compared }) {
         </div>
 
         <div className="res-card__price">
-          <span className="res-card__price-label">All-inclusive from</span>
+          <span className="res-card__price-label">Indicative from</span>
           <p className="res-card__price-num">
             <span ref={priceRef}>₹ {price.toFixed(1)}</span> Cr
           </p>

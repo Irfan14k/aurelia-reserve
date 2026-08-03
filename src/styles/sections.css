@@ -2145,6 +2145,43 @@ textarea.contact__input {
 .about {
   padding: var(--sec-pad) 0 0;
 }
+.ab-statement {
+  max-width: 860px;
+}
+.ab-statement__lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.7vw, 2.25rem);
+  line-height: 1.45;
+  font-weight: 330;
+  font-variation-settings: "opsz" 80;
+}
+.ab-statement__lead em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+.ab-statement__sub {
+  margin-top: 18px;
+  font-size: 15px;
+  color: var(--ivory-dim);
+  line-height: 1.85;
+  max-width: 62ch;
+}
+.ab-focus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+@media (max-width: 900px) {
+  .ab-focus {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .ab-focus {
+    grid-template-columns: 1fr;
+  }
+}
 .ab-block {
   margin-top: clamp(3.5rem, 7vw, 6rem);
 }
@@ -2730,13 +2767,14 @@ textarea.contact__input {
 }
 .footer__name {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
-  letter-spacing: 0.3em;
+  font-size: 1.15rem;
+  letter-spacing: 0.26em;
   font-weight: 400;
+  white-space: nowrap;
 }
 .footer__desc {
   font-size: 11px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ivory-faint);
   margin-top: 6px;
@@ -2781,6 +2819,31 @@ textarea.contact__input {
   gap: 26px;
   margin-top: 44px;
 }
+.footer__disclaimer {
+  margin-top: 40px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  max-width: 760px;
+}
+.footer__disclaimer-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.footer__disclaimer p:not(.footer__disclaimer-title) {
+  font-size: 12.5px;
+  color: var(--ivory-faint);
+  line-height: 1.85;
+}
+.footer__disclaimer-credit {
+  margin-top: 12px;
+  color: var(--ivory-dim);
+  letter-spacing: 0.08em;
+}
 .footer__social-link {
   display: inline-flex;
   align-items: center;
@@ -2817,6 +2880,13 @@ textarea.contact__input {
 .footer .watermark {
   margin: 0 0 -0.16em;
   transform: translateY(18%);
+  font-size: clamp(3.4rem, 11vw, 9.5rem);
+  letter-spacing: 0.14em;
+  line-height: 0.84;
+  white-space: nowrap;
+}
+.watermark span {
+  display: block;
 }
 @media (max-width: 900px) {
   .footer__top {

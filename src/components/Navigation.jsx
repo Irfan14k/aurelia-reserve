@@ -61,7 +61,7 @@ export default function Navigation({ active }) {
           </svg>
           <span className="nav__logo-text">
             {SITE.brand}
-            <small>{SITE.descriptor}</small>
+            <small>{SITE.descriptorShort}</small>
           </span>
         </a>
 

@@ -169,9 +169,9 @@ export default function Hero() {
       >
         <div className="hero__badge-top">
           <span className="hero__badge-live live-chip">
-            <span className="live-dot" aria-hidden /> Reserved
+            <span className="live-dot" aria-hidden /> Concept
           </span>
-          <span className="hero__badge-key">All-inclusive</span>
+          <span className="hero__badge-key">Indicative</span>
         </div>
         <p className="hero__badge-price">
           <span ref={priceRef}>₹ {price.toFixed(1)}</span> Cr

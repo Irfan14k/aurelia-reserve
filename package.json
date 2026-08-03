@@ -1,9 +1,25 @@
 {
-  "name": "aurelia-residences",
+  "name": "aurelia-reserve",
   "private": true,
-  "version": "2.0.0",
+  "version": "2.1.0",
   "type": "module",
-  "description": "AURELIA — Residences at Worli Sea Face. An award-calibre luxury web experience. React 18 · Vite · Lenis · Custom hooks.",
+  "description": "Luxury Real Estate Experience — Concept Demo built with React, TypeScript, Vite and modern motion design.",
+  "keywords": [
+    "luxury",
+    "real-estate",
+    "portfolio",
+    "react",
+    "vite",
+    "typescript",
+    "frontend",
+    "motion",
+    "gsap",
+    "framer-motion",
+    "concept",
+    "demo"
+  ],
+  "author": "Irfan Khan",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

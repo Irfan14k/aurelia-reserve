@@ -1,7 +1,7 @@
 /**
  * Floor plan geometry — viewBox 900 × 640.
  * Rooms are drawn as filled shapes; walls render as strokes on top.
- * Sea faces west (left), matching Worli Sea Face.
+ * The sea faces west (left) — a classic coastal residence orientation.
  */
 export const FLOOR_PLANS = [
   {

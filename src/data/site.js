@@ -1,30 +1,31 @@
 /**
- * Single source of brand truth — rebrand the entire experience here.
+ * Single source of brand truth — this is a generic concept demo.
+ * All content is fictional and for portfolio demonstration only.
  */
 export const SITE = {
-  brand: "AURELIA",
-  descriptor: "Residences at Worli Sea Face",
-  city: "Mumbai",
+  brand: "AURELIA RESERVE",
+  descriptor: "Luxury Real Estate Experience – Concept Demo",
+  descriptorShort: "Concept Demo",
   tagline: "Where the sea keeps time.",
-  completion: "2028",
-  phone: "+91 22 4000 0000",
-  email: "residences@aurelia.example",
-  address: "Sales Gallery · 6th Floor, One Worli, Worli Sea Face, Mumbai 400018",
-  hours: "Open daily · 10:00 – 20:00",
+  phone: "+00 0000 000000",
+  email: "hello@yourportfolio.dev",
+  address: "By appointment only",
+  location: "By appointment only",
+  hours: "By appointment only",
   social: [
+    { label: "LinkedIn", href: "https://linkedin.com/in/irfan-khan-36220022b" },
+    { label: "GitHub", href: "https://github.com/YOUR_USERNAME" },
     { label: "Instagram", href: "#" },
-    { label: "LinkedIn", href: "#" },
-    { label: "Pinterest", href: "#" },
   ],
   hero: {
-    eyebrow: "Worli Sea Face · Mumbai · Est. 2028",
+    eyebrow: "Aurelia Reserve · Concept Demo",
     lines: ["Where the sea", "keeps time."],
     lede:
-      "Thirty-eight private residences rising above the Arabian Sea — carved in stone, glass and light. Designed with restraint. Delivered by hand, not haste.",
+      "Thirty-eight private residences rising above the sea — carved in stone, glass and light. Designed with restraint, presented as a study in premium digital craft.",
     ctaPrimary: "Book a Private Tour",
     ctaSecondary: "Explore Residences",
     price: 8.2,
-    priceLabel: "From ₹ 8.2 Cr onwards",
+    priceLabel: "From ₹ 8.2 Cr · indicative concept pricing",
     priceNote: "3–5 Bed · 2,460 – 6,800 sq ft",
   },
   nav: [
@@ -37,11 +38,11 @@ export const SITE = {
     { id: "contact", label: "Contact" },
   ],
   marquee: [
-    "62 floors above the Arabian Sea",
-    "38 private residences only",
-    "Aman-grade wellness & leisure",
+    "Thirty-eight private residences",
+    "Skyline of stone, glass and light",
+    "Resort-grade wellness & leisure",
     "360° uninterrupted sea views",
-    "Completion 2028",
-    "Designed by Studio Aurelia",
+    "Concept experience · 2026",
+    "Designed with restraint",
   ],
 };

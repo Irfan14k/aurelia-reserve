@@ -43,7 +43,7 @@ export const RESIDENCES = [
 export const COMPARE_META = [
   { key: "beds", label: "Configuration" },
   { key: "area", label: "Internal area", kind: "area" },
-  { key: "price", label: "All-inclusive price", kind: "price" },
+  { key: "price", label: "Indicative price", kind: "price" },
   { key: "remaining", label: "Availability", kind: "remaining" },
   { key: "aspect", label: "Aspect" },
   { key: "terrace", label: "Private terrace" },

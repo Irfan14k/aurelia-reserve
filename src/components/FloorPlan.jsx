@@ -259,7 +259,7 @@ export default function FloorPlan() {
                 {/* sea */}
                 <rect x="0" y="0" width="118" height="640" fill="url(#seaFill)" opacity="0.5" />
                 <text x="14" y="330" className="fp-sea-label" transform="rotate(-90 14 330)">
-                  ARABIAN SEA — WEST
+                  SEA — WEST
                 </text>
 
                 {/* rooms */}

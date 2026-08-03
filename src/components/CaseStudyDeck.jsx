@@ -171,7 +171,7 @@ export default function CaseStudyDeck() {
       {/* deck header */}
       <header className="cs-hero" id="cs-overview" data-chapter="overview">
         <div className="wrap">
-          <p className="eyebrow" data-reveal>Case Study · AURELIA Residences</p>
+          <p className="eyebrow" data-reveal>Case Study · Aurelia Reserve</p>
           <h1 className="cs-hero__title" data-reveal style={{ "--d": "140ms" }}>
             How a residence became <em>a feeling.</em>
           </h1>
@@ -180,7 +180,7 @@ export default function CaseStudyDeck() {
             Performance · Outcome — the whole story, in the site's own voice.
           </p>
           <div className="cs-hero__meta" data-reveal style={{ "--d": "400ms" }}>
-            <span>Studio Aurelia</span><i aria-hidden /><span>2026</span><i aria-hidden /><span>10-day build</span>
+            <span>Irfan Khan</span><i aria-hidden /><span>2026</span><i aria-hidden /><span>Concept demo</span>
           </div>
         </div>
       </header>

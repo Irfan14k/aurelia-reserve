@@ -6,7 +6,7 @@ export const CASE_CHAPTERS = [
     id: "overview",
     n: "01",
     title: "Overview",
-    body: "AURELIA is a concept experience for a fictional luxury residence at Worli Sea Face — built to prove that a real-estate microsite can feel like a brand film. One scroll, eight chapters, one toggle from website to case study.",
+    body: "AURELIA is a concept experience for a fictional luxury residence — built to prove that a real-estate microsite can feel like a brand film. One scroll, eight chapters, one toggle from website to case study.",
     stats: [
       { value: 98, suffix: "", label: "Lighthouse performance" },
       { value: 92, suffix: " KB", label: "Initial JS (gzip)" },
@@ -42,9 +42,9 @@ export const CASE_CHAPTERS = [
     id: "moodboard",
     n: "04",
     title: "Moodboard",
-    body: "Three words pinned to the wall: Aman, Apple, Archives. Warm stone and champagne light; keynote pacing; editorial typography. Everything on the site traces back to one of the three.",
+    body: "Three words pinned to the wall: Resort, Editorial, Archives. Warm stone and champagne light; keynote pacing; editorial typography. Everything on the site traces back to one of the three.",
     images: [
-      { src: "/images/opt/hero-2.jpg", note: "Aman — water, stone, light" },
+      { src: "/images/opt/hero-2.jpg", note: "Resort — water, stone, light" },
       { src: "/images/opt/amenity-wellness.jpg", note: "Warmth — travertine glow" },
       { src: "/images/opt/residence-3.jpg", note: "Archives — walnut and brass" },
       { src: "/images/opt/gallery-facade.jpg", note: "Night — the tower as lantern" },

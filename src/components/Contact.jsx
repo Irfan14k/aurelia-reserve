@@ -178,8 +178,8 @@ export default function Contact() {
                 </button>
 
                 <p className="contact__fine">
-                  By sending, you agree to be contacted by the AURELIA concierge.
-                  No newsletters. No noise.
+                  Concept demo — no data is stored, sent or shared.
+                  For a real project, wire this form to your CRM.
                 </p>
               </form>
             )}
