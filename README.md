@@ -141,3 +141,20 @@ All branding, names, imagery, copy and content are fictional or used only for de
 - Email: [hello@yourportfolio.dev](mailto:hello@yourportfolio.dev)
 - LinkedIn: [linkedin.com/in/irfan-khan-36220022b](https://linkedin.com/in/irfan-khan-36220022b)
 - GitHub: [github.com/YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+## Live Links
+
+🌐 Live Website:
+https://YOUR-VERCEL-URL.vercel.app
+
+🎨 Figma Presentation:
+https://www.figma.com/deck/hMrHWp0mxF7XxaLTT7R4Md/Aurelia-Reserve-...
+
+💻 GitHub Repository:
+https://github.com/Irfan14k/aurelia-reserve
+## Portfolio Note
+
+This project is a fictional luxury real estate concept created for portfolio purposes only.
+
+It is not affiliated with, endorsed by, or associated with any real estate developer, company, brand, or project.
+
+All branding, visuals, names, copywriting, interactions, and animations were designed to demonstrate premium UI/UX, frontend engineering, and motion design capabilities.
