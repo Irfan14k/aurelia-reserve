@@ -156,7 +156,7 @@ All branding, names, imagery, copy and content are fictional or used only for de
 ## Live Links
 
 🌐 Live Website:
-https://YOUR-VERCEL-URL.vercel.app
+https://aurelia-reserve-puce.vercel.app/
 
 🎨 Figma Presentation:
 https://www.figma.com/deck/hMrHWp0mxF7XxaLTT7R4Md/Aurelia-Reserve-...
