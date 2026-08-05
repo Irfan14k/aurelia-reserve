@@ -1,52 +1,13 @@
 # Aurelia Reserve
 
 **Luxury Real Estate Experience**
-const { chromium } = require('playwright');
+ # Aurelia Reserve
 
-(async () => {
-  // Launch browser in headless mode (no browser UI or dev tools)
-  const browser = await chromium.launch({ headless: true });
-  
-  const context = await browser.newContext({
-    viewport: { width: 2560, height: 1440 }, // Exact 2K resolution
-    deviceScaleFactor: 1, // Keep at 1 for exact 2560x1440 pixel output
-  });
-  
-  const page = await context.newPage();
+Luxury Real Estate Experience
 
-  // Inject CSS to hide cursor, scrollbars, and ensure perfect rendering
-  await page.addStyleTag({
-    content: `
-      * { cursor: none !important; }
-      ::-webkit-scrollbar { display: none !important; width: 0 !important; }
-      body { 
-        -ms-overflow-style: none !important; 
-        scrollbar-width: none !important; 
-      }
-      html { scroll-behavior: auto !important; }
-    `
-  });
+Concept Demo
 
-  // Navigate to the target URL
-  await page.goto('https://your-website.com', { 
-    waitUntil: 'networkidle',
-    timeout: 60000 
-  });
-
-  // Optional: Wait for fonts and animations to finish loading for "perfect spacing"
-  await page.waitForTimeout(2000); 
-
-  // Capture only the visible viewport (Full hero section + Nav)
-  await page.screenshot({
-    path: 'preview.webp',
-    type: 'webp',
-    quality: 90, // High quality for premium feel
-    fullPage: false // Ensures only the 2560x1440 viewport is captured
-  });
-
-  console.log('Screenshot saved as preview.webp');
-  await browser.close();
-})();
+![Hero Preview](public/preview.webp)
 Concept Demo
 ![React](https://img.shields.io/badge/React-19-blue)
 
