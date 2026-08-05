@@ -150,9 +150,9 @@ All branding, names, imagery, copy and content are fictional or used only for de
 
 ## Contact
 
-- Email: - Email: [khanirfan14786@gmail.com](mailto:khanirfan14786@gmail.com)
+- Email: [khanirfan14786@gmail.com](mailto:khanirfan14786@gmail.com)
 - LinkedIn: [linkedin.com/in/irfan-khan-36220022b](https://linkedin.com/in/irfan-khan-36220022b)
-- GitHub: [https://github.com/Irfan14k](https://github.com/Irfan14k)
+- GitHub: [github.com/Irfan14k](https://github.com/Irfan14k)
 ## Live Links
 
 🌐 Live Website:
