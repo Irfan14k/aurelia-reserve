@@ -57,6 +57,14 @@ export default function Hero() {
     return () => clearInterval(id);
   }, [reduced, videoFailed]);
 
+  /* ——— Play the active film when it becomes active ——— */
+  useEffect(() => {
+    if (videoFailed) return;
+    const vids = mediaRef.current?.querySelectorAll("video");
+    const v = vids?.[active];
+    if (v && v.paused) v.play().catch(() => {});
+  }, [active, videoFailed]);
+
   /* ——— Mouse parallax across depth layers ——— */
   useEffect(() => {
     if (reduced) return;
