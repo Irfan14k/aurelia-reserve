@@ -6,22 +6,6 @@
 Luxury Real Estate Experience
 
 Concept Demo
-
-![Hero Preview](Capture a premium ultra-high-resolution desktop screenshot of the homepage.
-
-Requirements:
-- 2560×1440 resolution
-- Full hero section only
-- Navigation visible
-- Cinematic lighting
-- Premium typography
-- Mouse cursor hidden
-- No browser UI
-- No scrollbars
-- No developer tools
-- Perfect spacing
-- Export as preview.webp)
-Concept Demo
 ![React](https://img.shields.io/badge/React-19-blue)
 
 ![Vite](https://img.shields.io/badge/Vite-Latest-purple)
