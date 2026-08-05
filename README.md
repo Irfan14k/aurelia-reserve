@@ -1,3 +1,4 @@
+![Aurelia Reserve Hero](public/images/preview.webp)
 # Aurelia Reserve
 
 **Luxury Real Estate Experience**
