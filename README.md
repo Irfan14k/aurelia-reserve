@@ -3,7 +3,15 @@
 **Luxury Real Estate Experience**
 
 Concept Demo
+![React](https://img.shields.io/badge/React-19-blue)
 
+![Vite](https://img.shields.io/badge/Vite-Latest-purple)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
+
+![License](https://img.shields.io/badge/License-MIT-green)
+
+![Status](https://img.shields.io/badge/Status-Portfolio-gold)
 ---
 
 A fictional luxury real-estate website engineered to award-level standards — cinematic storytelling, premium motion design and modern frontend engineering, presented as an independent portfolio concept.
