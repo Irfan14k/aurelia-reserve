@@ -1,91 +1,66 @@
 <!doctype html>
-<html lang="en" data-timeofday="dusk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-
-    <!-- Primary meta -->
-    <title>Aurelia Reserve | Luxury Real Estate Experience | Concept Demo</title>
-    <meta name="description" content="Award-level luxury real estate concept demonstrating premium frontend engineering, cinematic storytelling and motion design." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0806" />
     <meta name="author" content="Irfan Khan" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <link rel="canonical" href="https://yourportfolio.dev/" />
-    <meta name="theme-color" content="#0B0B0D" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="canonical" href="https://aurelia-reserve.example/" />
+    <meta name="description" content="Aurelia Reserve — Luxury Real Estate Experience. An independent concept demo by Irfan Khan showcasing premium architecture, cinematic storytelling and luxury digital experiences." />
+    <meta name="keywords" content="Aurelia Reserve, luxury real estate, concept demo, portfolio, Irfan Khan, premium design, architecture, cinematic web experience, motion design" />
 
     <!-- Open Graph -->
+    <meta property="og:title" content="Aurelia Reserve — Luxury Real Estate Experience" />
+    <meta property="og:description" content="Where Silence Meets Opulence. An independent luxury real estate concept demo — a portfolio project by Irfan Khan." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Aurelia Reserve" />
-    <meta property="og:title" content="Aurelia Reserve | Luxury Real Estate Experience | Concept Demo" />
-    <meta property="og:description" content="Award-level luxury real estate concept demonstrating premium frontend engineering, cinematic storytelling and motion design." />
-    <meta property="og:url" content="https://yourportfolio.dev/" />
-    <meta property="og:image" content="https://yourportfolio.dev/og-image.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://aurelia-reserve.example/" />
+    <meta property="og:image" content="https://aurelia-reserve.example/images/hero.jpg" />
+    <meta property="og:image:alt" content="Aurelia Reserve — luxury residence at golden hour" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter / X card -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Aurelia Reserve | Luxury Real Estate Experience | Concept Demo" />
-    <meta name="twitter:description" content="Award-level luxury real estate concept demonstrating premium frontend engineering, cinematic storytelling and motion design." />
-    <meta name="twitter:image" content="https://yourportfolio.dev/og-image.jpg" />
+    <meta name="twitter:title" content="Aurelia Reserve — Luxury Real Estate Experience" />
+    <meta name="twitter:description" content="Where Silence Meets Opulence. An independent luxury real estate concept demo by Irfan Khan." />
+    <meta name="twitter:creator" content="Irfan Khan" />
+    <meta name="twitter:image" content="https://aurelia-reserve.example/images/hero.jpg" />
 
-    <!-- Icons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Fonts — variable serif + sans, swap-display, preconnected -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://videos.pexels.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..700&display=swap"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..600&family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <!-- Hero poster preload (LCP) -->
-    <link rel="preload" as="image" href="/images/opt/poster-hero-1.jpg" fetchpriority="high" />
+    <title>Aurelia Reserve — Luxury Real Estate Experience</title>
 
-    <!-- Structured data -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ApartmentComplex",
-        "name": "Aurelia Reserve",
-        "description": "A fictional luxury real estate concept — concept demo of premium frontend engineering, cinematic storytelling and motion design.",
-        "url": "https://yourportfolio.dev/",
-        "image": "https://yourportfolio.dev/og-image.jpg",
-        "numberOfUnits": 38,
-        "amenityFeature": [
-          { "@type": "LocationFeatureSpecification", "name": "25m Infinity Pool", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Spa & Wellness Sanctuary", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Private Chef's Cellar", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Sky Garden", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "24/7 Concierge", "value": true }
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Aurelia Reserve",
+      "alternateName": "Aurelia Reserve — Luxury Real Estate Experience",
+      "description": "An independent luxury real estate concept demo created for portfolio and demonstration purposes. Fictional brand exploring cinematic storytelling and premium digital experience design.",
+      "genre": "Concept Demo · Portfolio Project",
+      "creator": {
+        "@type": "Person",
         "name": "Irfan Khan",
-        "url": "https://yourportfolio.dev/",
-        "logo": "https://yourportfolio.dev/favicon.svg",
-        "sameAs": [
-          "https://linkedin.com/in/irfan-khan-36220022b",
-          "https://github.com/YOUR_USERNAME"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "hello@yourportfolio.dev",
-          "contactType": "portfolio",
-          "availableLanguage": ["en"]
-        }
-      }
+        "jobTitle": "UI/UX Designer, Motion Designer & Frontend Developer"
+      },
+      "keywords": "Aurelia Reserve, luxury real estate, concept demo, portfolio, Irfan Khan",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "isFamilyFriendly": true,
+      "disclaimer": "This is an independent design and development concept. It is not affiliated with, endorsed by or associated with any real estate developer, project or trademark. All names, branding, locations, pricing and property information are fictional."
+    }
     </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
