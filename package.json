@@ -34,7 +34,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "jsdom": "^25.0.1",
     "vite": "^5.4.11"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

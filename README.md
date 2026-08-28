@@ -190,7 +190,16 @@ update member_profiles set tier = 'owner' where email = 'you@example.com';
 - **unreachable** — env vars point at a non-existent project: the query failure degrades to
   bundled data, the error is reported rather than swallowed, and sign-in fails cleanly
 
-22 checks, all expected to pass.
+22 checks, all expected to pass. The harness needs jsdom, which is kept out of
+`package.json` so deploy installs stay lean — install it once with
+`npm install --no-save jsdom@^25`.
+
+### Node version
+
+`package.json` pins `engines.node: ">=22"`. This is not cosmetic: every `@supabase/*`
+package declares `engines: node >=22.0.0`, and Vercel selects the build runtime from
+`engines.node` when a project has no explicit override. Without it a project pinned to an
+older Node will reject the install.
 
 ## Deployment
 

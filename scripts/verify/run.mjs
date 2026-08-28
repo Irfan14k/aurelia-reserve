@@ -5,10 +5,26 @@
  *   npm run verify            # both modes: unconfigured + unreachable backend
  *   npm run verify:static     # no Supabase env — bundled-data fallback
  *   npm run verify:offline    # env set but backend unreachable — error paths
+ *
+ * jsdom is a dev-only harness dependency and is deliberately kept out of
+ * package.json so production installs (Vercel) stay lean. One-time setup:
+ *   npm install --no-save jsdom@^25
  */
-import { JSDOM } from "jsdom";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
+
+let JSDOM;
+try {
+  ({ JSDOM } = await import("jsdom"));
+} catch {
+  console.error(
+    "\njsdom is not installed. It is required only for this verify harness and is\n" +
+      "kept out of package.json so deploy installs stay lean.\n\n" +
+      "    npm install --no-save jsdom@^25\n\n" +
+      "Then re-run:  npm run verify\n"
+  );
+  process.exit(2);
+}
 
 const nodeFetch = globalThis.fetch;
 
