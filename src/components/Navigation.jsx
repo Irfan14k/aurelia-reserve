@@ -3,6 +3,7 @@ import { SITE } from "../data/site";
 import { scrollToSection, stopScroll, startScroll } from "../lib/lenis";
 import { useAmbientSound } from "../context/SoundContext";
 import { useCaseStudy } from "../context/CaseStudyContext";
+import { useMembers } from "../context/AuthContext";
 
 /**
  * Fixed glass navigation — hides on scroll down, reveals on scroll up,
@@ -15,6 +16,7 @@ export default function Navigation({ active }) {
   const lastY = useRef(0);
   const { playing, toggle } = useAmbientSound();
   const { mode } = useCaseStudy();
+  const { user, profile, openPortal } = useMembers();
 
   useEffect(() => {
     const onScroll = () => {
@@ -90,6 +92,18 @@ export default function Navigation({ active }) {
               <i /><i /><i /><i />
             </span>
           </button>
+          <button
+            className={`nav__members${user ? " is-in" : ""}`}
+            onClick={openPortal}
+            aria-haspopup="dialog"
+            title={user ? "Members portal" : "Sign in to the members portal"}
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M12 3 4.5 6.4v5.1c0 4.4 3.1 8.3 7.5 9.5 4.4-1.2 7.5-5.1 7.5-9.5V6.4Z" />
+              {user ? <path d="m9 12 2.2 2.2L15.5 10" /> : <circle cx="12" cy="11.5" r="1.2" fill="currentColor" stroke="none" />}
+            </svg>
+            <span>{user ? (profile?.full_name?.split(" ")[0] || "Members") : "Members"}</span>
+          </button>
           <a href="#contact" className="nav__cta" onClick={(e) => go(e, "contact")}>
             Enquire
           </a>
@@ -118,6 +132,15 @@ export default function Navigation({ active }) {
           </a>
         ))}
         <div className="nav__menu-foot">
+          <button
+            className="nav__menu-members"
+            onClick={() => {
+              setOpen(false);
+              openPortal();
+            }}
+          >
+            {user ? "Members portal" : "Members sign in"}
+          </button>
           <span>{SITE.location}</span>
           <span>{SITE.hours}</span>
         </div>

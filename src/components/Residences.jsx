@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from "react";
-import { RESIDENCES, COMPARE_META, COMPARE_DATA } from "../data/residences";
+import { COMPARE_META } from "../data/residences";
 import { fmtCrore, fmtArea } from "../lib/format";
-import { useCountUp, useMagnetic } from "../hooks";
+import { useCountUp, useMagnetic, useResidences } from "../hooks";
 import { scrollToSection } from "../lib/lenis";
 import SectionHeading from "./SectionHeading";
 import LuxModal from "./LuxModal";
@@ -130,6 +130,9 @@ export default function Residences() {
   const [compare, setCompare] = useState([]);
   const [showCompare, setShowCompare] = useState(false);
 
+  // Live catalogue from Supabase, with the bundled data as a silent fallback.
+  const { residences, compareData, source, loading } = useResidences();
+
   const toggleCompare = (id) => {
     setCompare((c) => {
       if (c.includes(id)) return c.filter((x) => x !== id);
@@ -139,8 +142,8 @@ export default function Residences() {
   };
 
   const compareRes = useMemo(
-    () => RESIDENCES.filter((r) => compare.includes(r.id)),
-    [compare]
+    () => residences.filter((r) => compare.includes(r.id)),
+    [compare, residences]
   );
 
   return (
@@ -152,14 +155,17 @@ export default function Residences() {
           meta="38 homes · 3 collections"
         />
 
-        <div className="residences__grid">
-          {RESIDENCES.map((res, i) => (
+        <div className="residences__grid" aria-busy={loading}>
+          {residences.map((res, i) => (
             <TiltCard key={res.id} res={res} index={i} onCompare={toggleCompare} compared={compare.includes(res.id)} />
           ))}
         </div>
 
         <p className="residences__hint" data-reveal style={{ "--d": "200ms" }}>
           <span aria-hidden>◇</span> Select up to two residences to compare — hover a card to tilt it into the light.
+          <span className="residences__src" title={source === "database" ? "Served from Supabase" : "Served from bundled data"}>
+            {source === "database" ? "live availability" : "bundled data"}
+          </span>
         </p>
       </div>
 
@@ -202,8 +208,9 @@ export default function Residences() {
                 <table className="compare__table">
                   <tbody>
                     {COMPARE_META.map((m) => {
-                      const a = COMPARE_DATA[compareRes[0].id];
-                      const b = COMPARE_DATA[r.id];
+                      const a = compareData[compareRes[0].id];
+                      const b = compareData[r.id];
+                      if (!a || !b) return null;
                       const va = m.kind === "area" ? fmtArea(a[m.key]) : m.kind === "price" ? fmtCrore(a[m.key]) : a[m.key];
                       const vb = m.kind === "area" ? fmtArea(b[m.key]) : m.kind === "price" ? fmtCrore(b[m.key]) : b[m.key];
                       const diff = va !== vb;

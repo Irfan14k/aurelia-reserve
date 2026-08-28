@@ -10,6 +10,15 @@ dist-ssr/
 *.log
 .env
 .env.*
+!.env.example
+
+# supabase local dev
+supabase/.temp/
+supabase/.branches/
+
+# verify probe build output
+scripts/verify/.dist/
+scripts/verify/.dist-offline/
 
 # editor / OS
 .DS_Store
