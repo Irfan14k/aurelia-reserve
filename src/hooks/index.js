@@ -11,3 +11,6 @@ export { useMousePosition } from "./useMousePosition";
 export { useTimeOfDay } from "./useTimeOfDay";
 export { useCountUp } from "./useCountUp";
 export { useReducedMotion } from "./useReducedMotion";
+export { useResidences } from "./useResidences";
+export { useEnquiry } from "./useEnquiry";
+export { useAuth } from "./useAuth";

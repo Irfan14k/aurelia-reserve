@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { SITE } from "../data/site";
 import { fmtINR } from "../lib/format";
+import { useEnquiry, useResidences } from "../hooks";
+import { useMembers } from "../context/AuthContext";
 
 const FIELDS = [
   { id: "name", label: "Full name", type: "text", required: true, autoComplete: "name" },
@@ -28,7 +30,12 @@ export default function Contact() {
   const [values, setValues] = useState({ name: "", email: "", phone: "", interest: "", message: "" });
   const [errors, setErrors] = useState({});
   const [state, setState] = useState("idle"); // idle | sending | sent
+  const [failure, setFailure] = useState(null);
   const formRef = useRef(null);
+
+  const { user } = useMembers();
+  const { submit, isLive } = useEnquiry({ memberId: user?.id ?? null });
+  const { residences } = useResidences({ subscribe: false });
 
   const set = (id) => (e) => {
     const v = e.target.value;
@@ -36,14 +43,35 @@ export default function Contact() {
     if (errors[id]) setErrors((prev) => ({ ...prev, [id]: undefined }));
   };
 
-  const onSubmit = (e) => {
+  // Pre-fill and lock the identity of a signed-in member.
+  useEffect(() => {
+    if (!user) return;
+    setValues((prev) => ({
+      ...prev,
+      email: prev.email || user.email || "",
+      name: prev.name || user.user_metadata?.full_name || "",
+    }));
+  }, [user]);
+
+  const onSubmit = async (e) => {
     e.preventDefault();
     const errs = validate(values);
     setErrors(errs);
     if (Object.keys(errs).length) return;
+
     setState("sending");
-    // wire your CRM / API here
-    setTimeout(() => setState("sent"), 1900);
+    setFailure(null);
+
+    const res = await submit({
+      name: values.name,
+      email: values.email,
+      phone: values.phone,
+      residenceId: values.interest,
+      message: values.message,
+    });
+
+    setState(res.ok ? "sent" : "idle");
+    if (!res.ok) setFailure(res.error || "That enquiry did not reach the concierge.");
   };
 
   const inputProps = (f) => ({
@@ -147,9 +175,11 @@ export default function Contact() {
                   <label htmlFor="interest" className="contact__label">Residence of interest</label>
                   <select {...inputProps(FIELDS[3])}>
                     <option value="">Any — surprise me</option>
-                    <option value="sky">The Sky Residence — from {fmtINR(18.4 * 1e7)}</option>
-                    <option value="garden">The Garden Terrace — from {fmtINR(9.6 * 1e7)}</option>
-                    <option value="atelier">The Atelier — from {fmtINR(8.2 * 1e7)}</option>
+                    {residences.map((r) => (
+                      <option key={r.id} value={r.id}>
+                        {r.name} — from {fmtINR(Number(r.price) * 1e7)}
+                      </option>
+                    ))}
                   </select>
                 </div>
 
@@ -160,6 +190,12 @@ export default function Contact() {
                     {values.message.length}/300
                   </span>
                 </div>
+
+                {failure && (
+                  <p className="contact__failure" role="alert">
+                    {failure} — please call the concierge on {SITE.phone}.
+                  </p>
+                )}
 
                 <button
                   type="submit"
@@ -178,8 +214,9 @@ export default function Contact() {
                 </button>
 
                 <p className="contact__fine">
-                  Concept demo — no data is stored, sent or shared.
-                  For a real project, wire this form to your CRM.
+                  {isLive
+                    ? "Your enquiry is written to the concierge inbox. Nothing is shared beyond it."
+                    : "Concept demo — no backend is attached, so nothing is stored or sent."}
                 </p>
               </form>
             )}

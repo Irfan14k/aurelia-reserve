@@ -26,5 +26,13 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true,
+    // Vite 5.4+ rejects unknown Host headers. Allow the sandbox preview hosts
+    // (and localhost) so the dev server is reachable through a proxy.
+    allowedHosts: [".e2b.app", "localhost", "127.0.0.1"],
+  },
+  preview: {
+    host: true,
+    port: 4173,
+    allowedHosts: [".e2b.app", "localhost", "127.0.0.1"],
   },
 });

@@ -35,6 +35,8 @@ import CaseStudyDeck from "./components/CaseStudyDeck";
 
 import { SoundProvider } from "./context/SoundContext";
 import { CaseStudyProvider, useCaseStudy } from "./context/CaseStudyContext";
+import { AuthProvider } from "./context/AuthContext";
+import AuthPortal from "./components/AuthPortal";
 import { setReady } from "./lib/ready";
 
 const SECTION_IDS = [
@@ -52,7 +54,9 @@ const SECTION_IDS = [
 
 /**
  * Heavy below-fold sections are code-split and IO-triggered —
- * initial JS stays ≈ 77 KB gz while every experience remains intact.
+ * initial JS stays ≈ 79 KB gz while every experience remains intact.
+ * The Supabase SDK is dynamically imported by lib/supabase.js and stays out
+ * of this figure entirely.
  */
 const AsyncGallery = () => (
   <AsyncSection id="gallery-slot" load={() => import("./components/Gallery")} minHeight={560} />
@@ -180,7 +184,11 @@ export default function App() {
   return (
     <SoundProvider>
       <CaseStudyProvider>
-        <Experience />
+        <AuthProvider>
+          <Experience />
+          {/* Members portal — a global modal, mounted once, driven by AuthProvider. */}
+          <AuthPortal />
+        </AuthProvider>
       </CaseStudyProvider>
     </SoundProvider>
   );
